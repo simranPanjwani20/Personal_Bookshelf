@@ -1,8 +1,6 @@
 import React, {useState, useEffect}from 'react';
 import SearchBar from '../../components/SearchBar';
 import BookCard from '../../components/BookCard';
-// import "./style.css"
-import sliceString from '../../Utils/sliceString';
 import { useBookshelf } from '../../Context/myBookshelf';
 
 function PersonalBookshelf() {
@@ -19,7 +17,7 @@ function PersonalBookshelf() {
      <div className="searchedBooks">
     {
        personalBooks?personalBooks?.map((book) => (
-       <BookCard title={sliceString(book.title)} editionCount={book.editionCount} showButton={false}/>
+       <BookCard title={book.title} editionCount={book.editionCount} showButton={false}/>
       )):""
     }
     </div>
